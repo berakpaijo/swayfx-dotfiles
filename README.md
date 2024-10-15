@@ -7,6 +7,8 @@
 
  ![screenshot 3](https://github.com/berakpaijo/swayfx-dotfiles/blob/main/ss-2.png)
 
+ ![screenshot 4](https://github.com/berakpaijo/swayfx-dotfiles/blob/main/ss-3.png)
+ 
  ## Dependencies
  - Sway
    - [SwayFX](https://github.com/WillPower3309/swayfx)
