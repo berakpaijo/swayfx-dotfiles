@@ -1,0 +1,88 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 15,
+    "modules-left": ["sway/workspaces", "custom/music"],
+    "modules-center": ["sway/window", "sway/mode"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "battery", "tray", "clock"],
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "❰<span color=\"#ebdbb2\"> {name} </span>❱", 
+        "format-icons": {
+            "1:web": "www",
+            "2:code": "",
+            "3:term": "",
+            "4:work": "",
+            "5:music": "",
+            "6:docs": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "tray": {
+        "icon-size": 12,
+        "spacing": 10
+    },
+    "clock": {
+        // Human Friendly
+        "format": "{:%A, %B %d at %I:%M %p}",
+        // 24hr Robot Friendly
+        "format-alt": "{:%Y-%m-%d - %H:%M}"
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "on-click": "alacritty -t 'Floating Terminal' -e htop"
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "{used:0.1f}/{total:0.1f}G "
+    },
+
+    "network": {
+        // "interface": "wlp2s0", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ifname}: {ipaddr} ",
+        "format-disconnected": "Disconnected ⚠"
+    },
+    "pulseaudio": {
+        //"scroll-step": 1,
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/music": {
+    "format": "  {}",
+    "max-length": 60,
+    "interval": 5, // Remove this if your script is endless and write in loop
+    "exec": "$HOME/.config/waybar/mediaplayer.sh 2> /dev/null", // Script in resources folder
+	"tooltip": false,
+	"on-click": "playerctl play-pause",
+	"on-scroll-up": "playerctl previous",
+	"on-scroll-down": "playerctl next"
+    }
+}
