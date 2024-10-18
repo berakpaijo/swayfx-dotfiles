@@ -20,6 +20,10 @@ set $term kitty
 # on the original workspace that the command was run on.
 set $menu rofi -show drun
 
+### Apps
+
+exec /home/$USER/.config/sway/scripts/startups.sh
+
 ### Screenshots
 # Entire screen + menu
 bindsym print exec ~/.config/sway/scripts/executable_screen.sh
@@ -62,7 +66,7 @@ titlebar_separator enable
 gaps outer 10
 gaps inner 10
 hide_edge_borders both
-default_border none
+default_border pixel 5
 default_floating_border pixel 5
 
 ### BORDERRRR
@@ -77,7 +81,10 @@ client.background #ebdbb2
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg $HOME/Downloads/tux.png fill
+output * {
+  background $HOME/Downloads/tux.png fill
+  resolution 1920x1080
+}
 #
 # Example configuration:
 #
@@ -102,12 +109,12 @@ output * bg $HOME/Downloads/tux.png fill
 #
 # Example configuration:
 #
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
+input "2:14:SynPS/2_Synaptics_TouchPad" {
+  dwt enabled
+  tap enabled
+  natural_scroll disabled
+  middle_emulation disabled
+}
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
