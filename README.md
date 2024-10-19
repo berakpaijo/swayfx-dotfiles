@@ -15,5 +15,6 @@
  - [Rofi](https://github.com/davatorium/rofi)
  - [Mako](https://github.com/emersion/mako)
  - Waybar
+ - [Starship](https://starship.rs/)
 
  ![abcd](https://github.com/berakpaijo/img/blob/main/New%20Piskel.gif)
