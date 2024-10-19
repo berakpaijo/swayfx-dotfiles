@@ -13,6 +13,7 @@
  - Sway
    - [SwayFX](https://github.com/WillPower3309/swayfx)
  - [Rofi](https://github.com/davatorium/rofi)
+   - [rofi-power-menu](https://github.com/jluttine/rofi-power-menu)
  - [Mako](https://github.com/emersion/mako)
  - Waybar
  - [Starship](https://starship.rs/)
