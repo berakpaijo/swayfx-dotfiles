@@ -17,5 +17,6 @@
  - [Mako](https://github.com/emersion/mako)
  - Waybar
  - [Starship](https://starship.rs/)
+ - [Neofetch](https://github.com/dylanaraps/neofetch)
 
  ![abcd](https://github.com/berakpaijo/img/blob/main/New%20Piskel.gif)
