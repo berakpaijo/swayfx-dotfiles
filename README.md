@@ -13,8 +13,10 @@
  - Sway
    - [SwayFX](https://github.com/WillPower3309/swayfx)
  - [Rofi](https://github.com/davatorium/rofi)
+   - [rofi-power-menu](https://github.com/jluttine/rofi-power-menu)
  - [Mako](https://github.com/emersion/mako)
  - Waybar
  - [Starship](https://starship.rs/)
+ - [Neofetch](https://github.com/dylanaraps/neofetch)
 
  ![abcd](https://github.com/berakpaijo/img/blob/main/New%20Piskel.gif)
