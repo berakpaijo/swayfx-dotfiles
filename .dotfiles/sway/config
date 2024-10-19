@@ -78,6 +78,8 @@ client.placeholder        #1d2021 #282828 #fbf1c7 #282828 #1d2021
 
 client.background #ebdbb2
 
+bindsym $mod+x exec rofi -show power-menu -modi power-menu:rofi-power-menu
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)

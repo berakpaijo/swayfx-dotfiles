@@ -1,88 +1,90 @@
 {
-    "layer": "top",
-    "position": "top",
-    "height": 15,
-    "modules-left": ["sway/workspaces", "custom/music"],
-    "modules-center": ["sway/window", "sway/mode"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "battery", "tray", "clock"],
-    "sway/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "format": "❰<span color=\"#ebdbb2\"> {name} </span>❱", 
-        "format-icons": {
-            "1:web": "www",
-            "2:code": "",
-            "3:term": "",
-            "4:work": "",
-            "5:music": "",
-            "6:docs": "",
-            "urgent": "",
-            "focused": "",
-            "default": ""
-        }
+	"layer": "top",
+	// Using margin-bottom with a negative value in order to reduce the space between Hyprland window and waybar
+	"margin-bottom": -10,
+	"margin-top": 0,
+	"modules-left": ["custom/launcher", "cpu","memory", "network","custom/spotify", "tray"],
+	"modules-center": ["sway/workspaces"],
+	"modules-right": ["backlight","pulseaudio","clock", "battery", "custom/power"],
+	
+	"sway/workspaces": {
+    	"format": "{icon}",
+	"on-scroll-up": "hyprctl dispatch workspace e+1",
+	"on-scroll-down": "hyprctl dispatch workspace e-1",
+	"on-click": "activate"
+	},
+	
+	"pulseaudio": {
+		"tooltip": false,
+		"scroll-step": 5,
+		"format": "{icon} {volume}%",
+		"format-muted": "{icon} {volume}%",
+		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"format-icons": {
+			"default": ["", "", ""]
+		}
+	},
+	"network": {
+		// "interface": "wlp2*", // (Optional) To force the use of this interface
+		"format-wifi": "",
+		"format-ethernet": "",
+		"tooltip-format": "{essid} ({signalStrength}%)",
+		"format-linked": "{ifname} (No IP) ",
+		"format-disconnected": "⚠",
+		"format-alt": "{ifname}: {ipaddr}/{cidr}"
+		},
+	"backlight": {
+		"tooltip": false,
+		"format": " {}%",
+		"interval":1,
+		"on-scroll-up": "light -A 5",
+		"on-scroll-down": "light -U 5"
+	},
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon}  {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
     },
-
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
-
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "tray": {
-        "icon-size": 12,
-        "spacing": 10
-    },
+	"tray":{
+		"icon-size":18,
+		"spacing": 10
+	},
     "clock": {
-        // Human Friendly
         "format": "{:%A, %B %d at %I:%M %p}",
-        // 24hr Robot Friendly
         "format-alt": "{:%Y-%m-%d - %H:%M}"
     },
     "cpu": {
-        "format": "{usage}% ",
-        "on-click": "alacritty -t 'Floating Terminal' -e htop"
+        "interval": 15,
+        "format": "  {}%",
+        "max-length": 10
     },
-
     "memory": {
         "interval": 30,
-        "format": "{used:0.1f}/{total:0.1f}G "
+        "format": "  {}%",
+        "max-length": 10
     },
+    "custom/spotify": {
+    	"interval": 1,
+	"return-type": "json",
+	"exec": "~/.config/waybar/scripts/spotify.sh",
+	"exec-if": "pgrep spotify",
+	"escape": true
 
-    "network": {
-        // "interface": "wlp2s0", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ifname}: {ipaddr} ",
-        "format-disconnected": "Disconnected ⚠"
     },
-    "pulseaudio": {
-        //"scroll-step": 1,
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-muted": "",
-        "format-icons": {
-            "headphones": "",
-            "handsfree": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", ""]
-        },
-        "on-click": "pavucontrol"
+    "custom/launcher":{
+        "format": "󰨡 ",
+        "on-click": "rofi -show drun",
+        "on-click-right": "killall rofi"
     },
-    "custom/music": {
-    "format": "  {}",
-    "max-length": 60,
-    "interval": 5, // Remove this if your script is endless and write in loop
-    "exec": "$HOME/.config/waybar/mediaplayer.sh 2> /dev/null", // Script in resources folder
-	"tooltip": false,
-	"on-click": "playerctl play-pause",
-	"on-scroll-up": "playerctl previous",
-	"on-scroll-down": "playerctl next"
-    }
+    "custom/power":{
+        "format": " ",
+        "on-click": "rofi -show power-menu -modi power-menu:rofi-power-menu",
+    },
 }
