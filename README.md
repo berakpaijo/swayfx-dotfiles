@@ -18,5 +18,6 @@
  - Waybar
  - [Starship](https://starship.rs/)
  - [Neofetch](https://github.com/dylanaraps/neofetch)
+ - [Spicetify](https://spicetify.app/)
 
  ![abcd](https://github.com/berakpaijo/img/blob/main/New%20Piskel.gif)
