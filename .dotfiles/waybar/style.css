@@ -7,7 +7,9 @@
 }
 
 window#waybar {
-
+  background-color: rgba(0,0,0,0);
+  border-radius: 1;
+  margin-top: 8px;
 }
 
 window#waybar.hidden {
@@ -15,7 +17,7 @@ window#waybar.hidden {
 }
 
 #window {
-	margin-top: 4px;
+	margin-top: 6px;
 	padding-left: 10px;
 	padding-right: 10px;
 	border-radius: 10px;
@@ -29,7 +31,7 @@ window#waybar.hidden {
 	font-size: 4px;
 	margin-bottom: 0px;
 	border-radius: 10px;
-	background: #3c3836;
+	background: rgba(60, 56, 54, 0.75);
 	transition: none;
 }
 
@@ -76,6 +78,18 @@ window#waybar.hidden {
 	transition: none;
 	color: #161320;
 	background: #bd93f9;
+}
+
+#bluetooth {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: #161320;
+	background: #99d1db;
 }
 
 #pulseaudio {

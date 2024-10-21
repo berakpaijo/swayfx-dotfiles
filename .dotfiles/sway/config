@@ -40,7 +40,7 @@ corner_radius 15
 blur enable
 blur_xray disable
 blur_passes 4
-blur_radius 4
+blur_radius 3
 
 shadows enable
 shadows_on_csd enable
@@ -54,7 +54,7 @@ dim_inactive_colors.urgent #900000FF
 
 layer_effects "panel" blur enable
 layer_effects "panel" corner_radius 10
-layer_effects "waybar" blur enable
+layer_effects "waybar" blur disable
 layer_effects "rofi" blur enable; shadows enable; corner_radius 13
 layer_effects "gtk-layer-shell" blur enable; shadows enable; corner_radius 13
 
@@ -84,7 +84,7 @@ bindsym $mod+x exec rofi -show power-menu -modi power-menu:rofi-power-menu
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
 output * {
-  background $HOME/Downloads/tux.png fill
+  background $HOME/Downloads/wall.jpg fill
   resolution 1920x1080
 }
 #

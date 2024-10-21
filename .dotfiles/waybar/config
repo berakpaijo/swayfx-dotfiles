@@ -1,23 +1,23 @@
 {
 	"layer": "top",
 	// Using margin-bottom with a negative value in order to reduce the space between Hyprland window and waybar
-	"margin-bottom": -10,
-	"margin-top": 0,
-	"modules-left": ["custom/launcher", "cpu","memory", "network","custom/spotify", "tray"],
+	"margin-bottom": -4,
+	"margin-top": 2,
+	"modules-left": ["custom/launcher", "cpu","memory", "network","bluetooth","custom/spotify", "tray"],
 	"modules-center": ["sway/workspaces"],
 	"modules-right": ["backlight","pulseaudio","clock", "battery", "custom/power"],
 	
 	"sway/workspaces": {
-    	"format": "{icon}",
-	"on-scroll-up": "hyprctl dispatch workspace e+1",
-	"on-scroll-down": "hyprctl dispatch workspace e-1",
-	"on-click": "activate"
+    "format": "{icon}",
+	  "on-scroll-up": "hyprctl dispatch workspace e+1",
+	  "on-scroll-down": "hyprctl dispatch workspace e-1",
+	  "on-click": "activate"
 	},
 	
 	"pulseaudio": {
 		"tooltip": false,
 		"scroll-step": 5,
-		"format": "{icon} {volume}%",
+		"format": "{icon}  {volume}%",
 		"format-muted": "{icon} {volume}%",
 		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
 		"format-icons": {
@@ -31,8 +31,15 @@
 		"tooltip-format": "{essid} ({signalStrength}%)",
 		"format-linked": "{ifname} (No IP) ",
 		"format-disconnected": "⚠",
-		"format-alt": "{ifname}: {ipaddr}/{cidr}"
+		"format-alt": "{ifname}: {ipaddr}/{cidr}",
+    "on-click":"bash $HOME/.config/rofi/rofi-wifi-menu/rofi-wifi-menu.sh"
 		},
+	"bluetooth": {
+		"format-on": "󰂯",
+		"format-off": "󰂲",
+		"format-connected": "󰂱",
+		"on-click": "rofi-bluetooth"
+	},
 	"backlight": {
 		"tooltip": false,
 		"format": " {}%",
