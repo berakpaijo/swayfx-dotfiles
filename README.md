@@ -14,6 +14,8 @@
    - [SwayFX](https://github.com/WillPower3309/swayfx)
  - [Rofi](https://github.com/davatorium/rofi)
    - [rofi-power-menu](https://github.com/jluttine/rofi-power-menu)
+   - [rofi-wifi-menu](https://github.com/ericmurphyxyz/rofi-wifi-menu)
+   - [rofi-bluetooth](https://github.com/nickclyde/rofi-bluetooth)
  - [Mako](https://github.com/emersion/mako)
  - Waybar
  - [Starship](https://starship.rs/)
