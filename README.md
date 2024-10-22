@@ -28,6 +28,7 @@
  ```sh
  git clone https://github.com/berakpaijo/swayfx-dotfiles.git
  cd swayfx-dotfiles/
+ cd .dotfiles/
  cp "your desired configuration folder" ~/.config/
  ```
 
