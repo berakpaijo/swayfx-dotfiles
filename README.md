@@ -23,4 +23,15 @@
  - [Spicetify](https://spicetify.app/)
  - [Kitty](https://github.com/kovidgoyal/kitty)
 
+ ## Installation
+ Clone the repository, then copy all your desired configuration to your `~/.config/` directory.
+ ```sh
+ git clone https://github.com/berakpaijo/swayfx-dotfiles.git
+ cd swayfx-dotfiles/
+ cp "your desired configuration folder" ~/.config/
+ ```
+
+ For Rofi's child configurations, rofi-power-menu, and rofi-bluetooth, add the executable files to your `$PATH` for easier access. Or you can copy them to your `/usr/bin/`.
+ You can read the full installation for both on the links below the Rofi under the [Dependencies](##Dependencies) tab.
+ 
  ![abcd](https://github.com/berakpaijo/img/blob/main/New%20Piskel.gif)
