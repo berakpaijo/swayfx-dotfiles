@@ -21,5 +21,6 @@
  - [Starship](https://starship.rs/)
  - [Neofetch](https://github.com/dylanaraps/neofetch)
  - [Spicetify](https://spicetify.app/)
+ - [Kitty](https://github.com/kovidgoyal/kitty)
 
  ![abcd](https://github.com/berakpaijo/img/blob/main/New%20Piskel.gif)

@@ -1,11 +1,12 @@
 max-visible=1
 anchor=top-right
-font=Inconsolata
+font=Incosolata 12
 
 icons=1
 markup=1
 
-padding=5
+padding=15
+width=300
 
 background-color=#689d6a
 progress-color=#ebdbb2

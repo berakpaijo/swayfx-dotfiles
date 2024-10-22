@@ -20,10 +20,6 @@ set $term kitty
 # on the original workspace that the command was run on.
 set $menu rofi -show drun
 
-### Apps
-
-exec /home/$USER/.config/sway/scripts/startups.sh
-
 ### Screenshots
 # Entire screen + menu
 bindsym print exec ~/.config/sway/scripts/executable_screen.sh
@@ -84,7 +80,7 @@ bindsym $mod+x exec rofi -show power-menu -modi power-menu:rofi-power-menu
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
 output * {
-  background $HOME/Downloads/wall.jpg fill
+  background $HOME/Downloads/houseonthesideofalake.jpg fill
   resolution 1920x1080
 }
 #
