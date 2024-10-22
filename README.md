@@ -32,6 +32,6 @@
  ```
 
  For Rofi's child configurations, rofi-power-menu, and rofi-bluetooth, add the executable files to your `$PATH` for easier access. Or you can copy them to your `/usr/bin/`.
- You can read the full installation for both on the links below the Rofi under the [Dependencies](##Dependencies) tab.
+ You can read the full installation for both on the links below the Rofi under the [Dependencies](https://github.com/berakpaijo/swayfx-dotfiles/blob/main/README.md#dependencies) tab.
  
  ![abcd](https://github.com/berakpaijo/img/blob/main/New%20Piskel.gif)
