@@ -75,8 +75,9 @@ client.placeholder        #1d2021 #282828 #fbf1c7 #282828 #1d2021
 client.background #ebdbb2
 
 # specific apps
-for_window [class="Spotify"] opacity 0.7
+for_window [class="Spotify"] opacity 0.725
 for_window [class="Spotify"] blur enable
+for_window [class="Spotify"] light 1
 
 bindsym $mod+x exec rofi -show power-menu -modi power-menu:rofi-power-menu
 
@@ -98,11 +99,11 @@ output * {
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
+ exec swayidle -w \
+          timeout 300 'swaylock -f -i "$HOME/Downloads/houseonthesideofalake.jpg"' \
+          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+          before-sleep 'swaylock -f -i "$HOME/Downloads/houseonthesideofalake.jpg"'
+
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
@@ -144,8 +145,8 @@ input "2:14:SynPS/2_Synaptics_TouchPad" {
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
-    # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    # Open Yazi
+    bindsym $mod+Shift+e exec kitty yazi
 #
 # Moving around:
 #
@@ -234,6 +235,25 @@ input "2:14:SynPS/2_Synaptics_TouchPad" {
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
+
+# Light:
+    # Using light
+    
+    # Increasing Backlight
+    bindsym --locked Shift+f3 exec light -A 5
+
+    # Decreasing Backlight
+    bindsym --locked Shift+f2 exec light -U 5
+
+# PulseAudio:
+    # Using pactl
+
+    # Increasing volume
+    bindsym --locked Shift+f8 exec --no-startup-id kitty pactl -- set-sink-volume 0 +2%
+
+    # Decreasing volume
+    bindsym --locked Shift+f7 exec --no-startup-id kitty pactl -- set-sink-volume 0 -2%
+
 #
 # Resizing containers:
 #
