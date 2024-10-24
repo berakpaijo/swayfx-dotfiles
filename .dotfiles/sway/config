@@ -86,7 +86,7 @@ bindsym $mod+x exec rofi -show power-menu -modi power-menu:rofi-power-menu
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
 output * {
   background $HOME/Downloads/houseonthesideofalake.jpg fill
-  resolution 1920x1080
+  resolution 3840x2160
 }
 #
 # Example configuration:
