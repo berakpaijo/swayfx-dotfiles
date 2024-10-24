@@ -38,7 +38,5 @@
 
  For Rofi's child configurations, rofi-power-menu, and rofi-bluetooth, add the executable files to your `$PATH` for easier access. Or you can copy them to your `/usr/bin/`.
  You can read the full installation for both on the links below the Rofi under the [Dependencies](https://github.com/berakpaijo/swayfx-dotfiles/blob/main/README.md#dependencies) tab.
- 
- For Yazi, you can either use my build from `.dotfiles/yazi/` directory. Or copy all the config files from `.dotfiles/yazi/yazi-config/` to your `~/.config/yazi/`. I recommend you to rebuild if you are trying to use my build, just in case if there's any error. Full documentation here: [Yazi](https://github.com/sxyazi/yazi).
 
  ![abcd](https://github.com/berakpaijo/img/blob/main/New%20Piskel.gif)
