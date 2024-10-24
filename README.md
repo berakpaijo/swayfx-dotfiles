@@ -1,13 +1,15 @@
 # LordPaijo's SWAYFX DOTFILES
  ## My complete SwayFX setup dotfiles.
 
- ![screenshot 1](https://github.com/berakpaijo/swayfx-dotfiles/blob/main/ss-0.png)
+ ![screenshot 1](https://github.com/berakpaijo/swayfx-dotfiles/blob/main/screenshots/ss-0.png)
 
- ![screenshot 2](https://github.com/berakpaijo/swayfx-dotfiles/blob/main/ss-1.png)
+ ![screenshot 2](https://github.com/berakpaijo/swayfx-dotfiles/blob/main/screenshots/ss-1.png)
 
- ![screenshot 3](https://github.com/berakpaijo/swayfx-dotfiles/blob/main/ss-2.png)
+ ![screenshot 3](https://github.com/berakpaijo/swayfx-dotfiles/blob/main/screenshots/ss-2.png)
 
- ![screenshot 4](https://github.com/berakpaijo/swayfx-dotfiles/blob/main/ss-3.png)
+ ![screenshot 4](https://github.com/berakpaijo/swayfx-dotfiles/blob/main/screenshots/ss-3.png)
+ 
+ ![screenshot 4](https://github.com/berakpaijo/swayfx-dotfiles/blob/main/screenshots/ss-4.png)
  
  ## Dependencies
  - [Sway](https://github.com/swaywm/sway)
