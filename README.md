@@ -1,6 +1,8 @@
 # LordPaijo's SWAYFX DOTFILES
  ## My complete SwayFX setup dotfiles.
 
+ ![screenshot 0](https://github.com/berakpaijo/swayfx-dotfiles/blob/main/screenshots/ss-5.png)
+
  ![screenshot 1](https://github.com/berakpaijo/swayfx-dotfiles/blob/main/screenshots/ss-0.png)
 
  ![screenshot 2](https://github.com/berakpaijo/swayfx-dotfiles/blob/main/screenshots/ss-1.png)
