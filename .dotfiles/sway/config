@@ -243,19 +243,22 @@ exec_always wlsunset -t 5400
     # Using light
     
     # Increasing Backlight
-    bindsym --locked Shift+f3 exec light -A 5
+    bindsym --locked XF86MonBrightnessUp exec light -A 5
 
     # Decreasing Backlight
-    bindsym --locked Shift+f2 exec light -U 5
+    bindsym --locked XF86MonBrightnessDown exec light -U 5
 
 # PulseAudio:
     # Using pactl
 
     # Increasing volume
-    bindsym --locked Shift+f8 exec --no-startup-id kitty pactl -- set-sink-volume 0 +2%
+    bindsym --locked XF86AudioRaiseVolume exec --no-startup-id kitty pactl -- set-sink-volume 0 +2%
 
     # Decreasing volume
-    bindsym --locked Shift+f7 exec --no-startup-id kitty pactl -- set-sink-volume 0 -2%
+    bindsym --locked XF86AudioLowerVolume exec --no-startup-id kitty pactl -- set-sink-volume 0 -2%
+
+    # Mute volume
+    bindsym --locked XF86AudioMute exec --no-startup-id kitty pactl -- set-sink-volume 0 0%
 
 #
 # Resizing containers:
