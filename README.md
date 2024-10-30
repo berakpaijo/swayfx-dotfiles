@@ -45,5 +45,5 @@
  You can read the full installation for both on the links below the Rofi under the [Dependencies](https://github.com/berakpaijo/swayfx-dotfiles/blob/main/README.md#dependencies) tab.
 
  ![abcd](https://github.com/berakpaijo/img/blob/main/New%20Piskel.gif)
-
+ 
 
