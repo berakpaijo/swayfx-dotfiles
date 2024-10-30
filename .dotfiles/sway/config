@@ -76,7 +76,7 @@ client.background #ebdbb2
 
 # specific apps
 for_window [class="Spotify"] opacity 0.725
-for_window [class="Spotify"] blur enable
+# for_window [class="Spotify"] blur enable
 for_window [class="Spotify"] light 1
 
 bindsym $mod+x exec rofi -show power-menu -modi power-menu:rofi-power-menu
@@ -85,7 +85,7 @@ bindsym $mod+x exec rofi -show power-menu -modi power-menu:rofi-power-menu
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
 output * {
-  background $HOME/Downloads/houseonthesideofalake.jpg fill
+  background $HOME/Downloads/forest.jpg fill
   resolution 3840x2160
 }
 #
@@ -121,6 +121,9 @@ input "2:14:SynPS/2_Synaptics_TouchPad" {
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
+
+# nightlight / eye warmer
+exec_always wlsunset -t 5400
 
 ### Key bindings
 #
@@ -285,6 +288,6 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.
 bar {
 	swaybar_command waybar
-    }
+}
 
 include $HOME/.config/sway/config.d/*
