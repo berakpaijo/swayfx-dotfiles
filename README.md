@@ -28,8 +28,9 @@
  - [Kitty](https://github.com/kovidgoyal/kitty)
  - [PulseAudio](https://www.freedesktop.org/wiki/Software/PulseAudio/)
    - [pactl](https://linux.die.net/man/1/pactl)
- - light
+ - Light
  - [Yazi](https://github.com/sxyazi/yazi)
+ - [WLSunset](https://github.com/kennylevinsen/wlsunset)
 
  ## Installation
  Clone the repository, then copy all your desired configuration to your `~/.config/` directory.
