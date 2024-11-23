@@ -31,6 +31,7 @@
  - Light
  - [Yazi](https://github.com/sxyazi/yazi)
  - [WLSunset](https://github.com/kennylevinsen/wlsunset)
+ - [CopyQ](https://hluk.github.io/CopyQ/)
 
  ## Installation
  Clone the repository, then copy all your desired configuration to your `~/.config/` directory.
