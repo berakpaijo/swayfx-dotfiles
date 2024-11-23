@@ -76,6 +76,7 @@ client.background #ebdbb2
 
 # specific apps
 for_window [class="Spotify"] opacity 0.725
+for_window [class="discord"] opacity 0.8
 # for_window [class="Spotify"] blur enable
 for_window [class="Spotify"] light 1
 
@@ -88,6 +89,7 @@ output * {
   background $HOME/Downloads/forest.jpg fill
   resolution 3840x2160
 }
+
 #
 # Example configuration:
 #
@@ -100,8 +102,8 @@ output * {
 # Example configuration:
 #
  exec swayidle -w \
-          timeout 300 'swaylock -f -i "$HOME/Downloads/houseonthesideofalake.jpg"' \
-          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+          timeout 1200 'swaylock -f -i "$HOME/Downloads/houseonthesideofalake.jpg"' \
+          timeout 2400 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
           before-sleep 'swaylock -f -i "$HOME/Downloads/houseonthesideofalake.jpg"'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -112,8 +114,9 @@ output * {
 #
 # Example configuration:
 #
-input "2:14:SynPS/2_Synaptics_TouchPad" {
+input "type:touchpad" {
   dwt enabled
+  dwtp enabled
   tap enabled
   natural_scroll enabled
   middle_emulation disabled
@@ -124,6 +127,9 @@ input "2:14:SynPS/2_Synaptics_TouchPad" {
 
 # nightlight / eye warmer
 exec_always wlsunset -t 5400
+
+# clipboard manager using CopyQ
+exec_always copyq
 
 ### Key bindings
 #
